@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Link For Operation</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id=wrap>
+    <!-- タイトル -->
+    <h1 class="headline">
+        <img src="img/pro.png">
+    </h1>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav class="globalMenuSp">
+          <ul>
+              <li><a href="index.html">通常版</a></li>
+              <li><a href="academic.html">Academic版</a></li>
+              <li><a href="btn/specification.html">仕様</a></li>
+              <li><a href="btn/inquery.html">問い合わせ(不具合報告）</a></li>
+              <li><a href="#">version : 1.1(20210607)</a></li>
+          </ul>
+      </nav>
+
+    <!-- グリッドレイアウトリンクボタン -->
+    <div class="btn">
+        <ul class=b1>
+            <li><a href="btn/rain.html"><img src="img/rain.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/wind.html"><img src="img/wind.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/thunder.html"><img src="img/thunder.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/snow.html"><img src="img/snow.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/chart.html"><img src="img/chart.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/satelite.html" ><img src="img/satellite3.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/metar.html"><img src="img/aircraft3.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/aviationWeather.pro.html"><img src="img/aircraft2.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/volcano.html"><img src="img/volcano.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/typhoon.pro.html"><img src="img/typhoon.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/fog.html"><img src="img/fog.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/model.pro.html"><img src="img/model.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="https://www.google.com/maps/d/edit?hl=ja&hl=ja&mid=17mZqdNeESYl2iyve6KntQp3vZkjWdILd&ll=35.73520283784472%2C136.6296309946424&z=7" target="_blank"><img src="img/livecamera.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="http://weather.uwyo.edu/upperair/sounding.html" target="_blank"><img src="img/emagram.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/river.html"><img src="img/river.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="https://www.jma.go.jp/bosai/map.html#6/37.011/139.219/&elem=all&contents=warning" target="_blank"><img src="img/alert.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/marine.html"><img src="img/marine.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="https://weathernews.jp/" target="_blank"><img src="img/wni.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/explanation.html"><img src="img/explanation.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="https://www.flightradar24.com/35.8,139.46/6" target="_blank"><img src="img/fr24.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/traffic.html"><img src="img/traffic.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/other.html"><img src="img/other.png" alt="" width="100" height="100" border="0"/></li></a>
+        </ul>
+    </div>
+</div>
+    <footer>
+      <small>© WEATHER LINK COLLECTION 2021 </small>
+    </footer>
+
+<script>
+    $(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
