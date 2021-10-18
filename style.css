@@ -1,0 +1,167 @@
+@charset"utf-8";
+
+/*felex designeの設定*/
+body {
+  display: flex; /*フレックスボックスに有効に*/
+  flex-flow: column; /*要素を縦に並べる*/
+  min-height: 100vh; /*最小でも画面の高さ分のbodyの高さを担保する*/
+}
+main {
+  flex: 1; /*画面の高さから他の同レイヤーの要素の高さを引いた値に*/
+}
+
+/* 背景の設定 */
+body{
+    background-color: #b1ddf6;
+  }
+
+/* タイトルの設定 */
+.headline {
+    text-align: center;
+    margin-top:40px;
+    margin-bottom: 40px;
+    text-decoration: none; /*下線を非表示にする*/
+}
+
+
+/* ボタンの設定 */
+.btn {
+  position: relative; 
+  padding: 50px;
+  overflow: hidden; /* 下のulのcssでリスト全体を右に50%移動しているので、その分幅が広がってしまいスクロールバーが表示されてしまいます。それを防ぐ為の設定です。 */
+}
+
+.btn ul {
+  position: relative;
+  left: 50%; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+  float: left;
+}
+
+.btn ul li{
+    display: inline-block; /*ボタンが横並びで回り込む処理、これを書けばfloat:leftはいらない*/
+    position: relative;
+    border-radius: 23px;
+    background: #b1ddf6;
+    box-shadow:10px 10px 20px #96bcd1,-10px -10px 20px #ccfeff;    
+    left: -50%; /* リスト全体であるul要素を左に50%移動。*/
+    list-style: none;
+    margin:0 42px 30px 0;
+}
+
+/* ボタンをクリックした時の動作 */
+.btn ul li :active{
+    float:none;
+    border-radius: 23px;
+    background: #b1ddf6;
+    box-shadow:  inset 10px 20px 20px #96bcd1,inset -10px -10px 20px #ccfeff;
+}
+
+/* n番目のボタンをフロート(回り込み）させないための処理...だがうまくいかない..ので結局float:left笑 */
+.btn ul li:nth-child(0){
+  flex-wrap: wrap;
+}
+
+/* コピーライト */
+footer{
+  margin-top: 50px;
+  width: 100%;  
+  height:30px;
+  text-align:center;
+  color:#000000;
+  }
+
+/*　ハンバーガーメニュー　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition   : 0.5s ease-in-out;
+  transition        : 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform   : rotate(315deg);
+  transform        : rotate(315deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform   : rotate(-315deg);
+  transform        : rotate(-315deg);
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.globalMenuSp ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #000;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  transform: translateY(0%);
+}
