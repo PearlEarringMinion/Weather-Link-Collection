@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Link For Operation</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id=wrap>
+    <!-- タイトル -->
+    <h1 class="headline">
+        <img src="img/title.png">
+    </h1>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav class="globalMenuSp">
+          <ul>
+              <li><a href="professional.html">Professional版</a></li>
+              <li><a href="#">Academic版</a></li>
+              <li><a href="btn/specification.html">仕様</a></li>
+              <li><a href="btn/inquery.html">問い合わせ(不具合報告）</a></li>
+              <li><a href="#">version : 1.1(20210607)</a></li>
+          </ul>
+      </nav>
+
+    <!-- グリッドレイアウトリンクボタン -->
+    <div class="btn">
+        <ul class=b1>
+            <li><a href="btn/rain.html"><img src="img/rain.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/wind.html"><img src="img/wind.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/thunder.html"><img src="img/thunder.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/snow.html"><img src="img/snow.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/chart.html"><img src="img/chart.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/satelite.html" ><img src="img/satellite3.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/metar.html"><img src="img/aircraft3.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/aviationWeather.html"><img src="img/aircraft2.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/volcano.html"><img src="img/volcano.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/typhoon.html"><img src="img/typhoon.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="http://micos-sb101.on.arena.ne.jp/fog-info/login.php" target="_blank"><img src="img/fog.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="btn/model.html"><img src="img/model.png" alt="" width="100" height="100" border="0"/></li></a>
+            <li><a href="https://www.google.com/maps/d/edit?hl=ja&hl=ja&mid=17mZqdNeESYl2iyve6KntQp3vZkjWdILd&ll=35.73520283784472%2C136.6296309946424&z=7" target="_blank"><img src="img/livecamera.png" alt="" width="100" height="100" border="0"/></li></a>
+        </ul>
+    </div>
+</div>
+    <footer>
+      <small>© KOHEI SHINOHARA 2021 </small>
+    </footer>
+
+<script>
+    $(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
