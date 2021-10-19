@@ -61,6 +61,27 @@ body{
   flex-wrap: wrap;
 }
 
+/*表の設定*/
+.academicChart{
+  
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px
+}
+
+th, td {
+  border: solid 1px #333; /* 線の種類 太さ 色 */
+  padding: 5px;      /* 余白指定 */
+}
+
+th {
+  color: #0d90f3;/* 見出しの文字色 */
+  background-color: #d0ebfd; /* 見出しの背景色 */
+}
+
 /* コピーライト */
 footer{
   margin-top: 50px;
