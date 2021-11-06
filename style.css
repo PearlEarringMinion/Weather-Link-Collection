@@ -200,27 +200,9 @@ nav.globalMenuSp.active {
     }
 
     .headline img {
-        width: 90px;
-        height: 30px;
+        width: 120px;
+        height: 40px;
     }
   
-   .btn { 
-        padding: 30px;
-        width: 70px;
-        height: 70px;
-   }
-
-   .btn ul li{
-        border-radius: 14px;
-        background: #b1ddf6;
-        box-shadow:7px 7px 14px #96bcd1,-7px -7px 14px #ccfeff;    
-   }
-
-   /* ボタンをクリックした時の動作 */
-   .btn ul li :active{
-        border-radius: 14px;
-        background: #b1ddf6;
-        box-shadow:  inset 7px 7px 14px #96bcd1,inset -7px -7px 14px #ccfeff;
-   }
 
 }
