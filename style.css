@@ -199,7 +199,7 @@ nav.globalMenuSp.active {
         text-decoration: none; /*下線を非表示にする*/
     }
 
-    .titleImage img {
+    .headline img {
         width: 5px;
         height: 5px;
     }
