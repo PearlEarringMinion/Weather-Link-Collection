@@ -200,7 +200,11 @@ nav.globalMenuSp.active {
     }
 
     .headline img {
-        width: 120px;
-        height: 40px;
+        width: 130px;
+        height: 50px;
+    }
+  
+    .btn { 
+        padding: 30px;
     }
 }
