@@ -205,8 +205,13 @@ nav.globalMenuSp.active {
     }
   
     .btn { 
+        padding:30px;
         width: 70px;
         height: 70px;
+    }
+  
+    .btn ul {
+       /*何も書かないことでbtn ulのcssをリセット*/
     }
   
     .btn ul li{
