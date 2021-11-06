@@ -186,3 +186,18 @@ nav.globalMenuSp ul li a {
 nav.globalMenuSp.active {
   transform: translateY(0%);
 }
+
+
+/*スマホ用CSS　ウィンドウ幅が0～767pxの場合にCSSを適用*/
+@media screen and (max-width: 479px) {
+
+    /* タイトルの設定 */
+    .headline {
+        text-align: center;
+        margin-top:10px;
+        margin-bottom: 10px;
+        text-decoration: none; /*下線を非表示にする*/
+        width: 30px;
+        height: 50px
+    }
+}
