@@ -203,5 +203,18 @@ nav.globalMenuSp.active {
         width: 150px;
         height: 50px;
     }
+  
+   .btn ul li{
+        border-radius: 14px;
+        background: #b1ddf6;
+        box-shadow:7px 7px 14px #96bcd1,-7px -7px 14px #ccfeff;    
+    }
+
+   /* ボタンをクリックした時の動作 */
+   .btn ul li :active{
+        border-radius: 14px;
+        background: #b1ddf6;
+        box-shadow:  inset 7px 7px 14px #96bcd1,inset -7px -7px 14px #ccfeff;
+    }
 
 }
