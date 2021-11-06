@@ -214,7 +214,6 @@ nav.globalMenuSp.active {
         border-radius: 14px;
         background: #b1ddf6;
         box-shadow:7px 7px 14px #96bcd1,-7px -7px 14px #ccfeff;    
-        left: -50%; /* リスト全体であるul要素を左に50%移動。*/
     }
 
     /* ボタンをクリックした時の動作 */
