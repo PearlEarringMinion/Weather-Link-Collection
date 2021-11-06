@@ -192,7 +192,7 @@ nav.globalMenuSp.active {
 @media screen and (max-width: 479px) {
 
     /* タイトルの設定 */
-    .headline {
+    .h {
         text-align: center;
         margin-top:10px;
         margin-bottom: 10px;
