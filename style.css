@@ -219,8 +219,8 @@ nav.globalMenuSp.active {
   .hamburger {
   right : 13px;
   top   : 12px;
-  width : 84px;
-  height: 84px;
+  width : 60px;
+  height: 60px;
 }
 .hamburger span {
   width   : 60px;
