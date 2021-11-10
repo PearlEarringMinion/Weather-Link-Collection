@@ -204,5 +204,35 @@ nav.globalMenuSp.active {
         height: 40px;
     }
   
+   /*ハンバーガーメニューをスマホ用に拡大する*/
+  .hamburger {
+  right : 13px;
+  top   : 12px;
+  width : 84px;
+  height: 84px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition   : 0.5s ease-in-out;
+  transition        : 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 20px;
+}
+.hamburger span:nth-child(2) {
+  top: 40px;
+}
+.hamburger span:nth-child(3) {
+  top: 60px;
+}
+  
 
 }
