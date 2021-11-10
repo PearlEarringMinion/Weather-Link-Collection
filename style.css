@@ -221,19 +221,11 @@ nav.globalMenuSp.active {
   top   : 12px;
   width : 84px;
   height: 84px;
-  cursor: pointer;
-  text-align: center;
 }
 .hamburger span {
-  display : block;
-  position: absolute;
-  width   : 30px;
-  height  : 2px ;
+  width   : 60px;
+  height  : 4px ;
   left    : 6px;
-  background : #555;
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition   : 0.5s ease-in-out;
-  transition        : 0.5s ease-in-out;
 }
 .hamburger span:nth-child(1) {
   top: 20px;
