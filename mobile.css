@@ -1,0 +1,149 @@
+@charset"utf-8";
+
+/*felex designeの設定*/
+body {
+  /*display: flex;*/
+  flex-flow: column; /*要素を縦に並べる*/
+  min-height: 100vh; /*最小でも画面の高さ分のbodyの高さを担保する*/
+}
+main {
+  flex: 1; /*画面の高さから他の同レイヤーの要素の高さを引いた値に*/
+}
+
+/* 背景の設定 */
+body{
+    background-color: #b1ddf6;
+  }
+
+/* タイトルの設定 */
+.headline {
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+    text-decoration: none; /*下線を非表示にする*/
+}
+
+img.example1{
+  width: 190px;
+  height: 60px;
+}
+
+
+/* ボタンの設定 */
+.b1 {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin:auto;
+}
+
+.btn ul li{
+  /*border: solid 1px #bebcbc;*/
+}
+
+
+
+/* コピーライト */
+footer{
+  margin-top: 50px;
+  width: 100%;  
+  height:30px;
+  text-align:center;
+  color:#000000;
+  }
+
+/*　ハンバーガーメニュー　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition   : 0.5s ease-in-out;
+  transition        : 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform   : rotate(315deg);
+  transform        : rotate(315deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform   : rotate(-315deg);
+  transform        : rotate(-315deg);
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.globalMenuSp ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #000;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  transform: translateY(0%);
+}
