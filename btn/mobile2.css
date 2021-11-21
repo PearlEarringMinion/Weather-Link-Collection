@@ -1,0 +1,224 @@
+@charset"utf-8";
+
+/* 雪を降らせる */
+    .snow {
+  color: snow; /*雪の色*/
+  font-size: 18px; /*雪の大きさ*/
+  position: fixed;
+  top: -5%; /*初期位置*/
+  text-shadow:
+  5vw   -100px 2px,
+  10vw  -400px 3px,
+  20vw  -500px 4px,
+  30vw  -580px 1px,
+  39vw  -250px 2px,
+  42vw  -340px 5px,
+  56vw  -150px 2px,
+  63vw  -180px 0,
+  78vw  -220px 4px,
+  86vw  -320px 9px,
+  94vw  -170px 7px;
+  animation: anim 5s linear infinite;
+}
+
+@keyframes anim {
+  100% {
+    color: transparent;
+    top: 150%;
+  }
+}
+
+/* 雨を降らせる */
+.rain {
+    color: rgb(8, 8, 8); /*雪の色*/
+    font-size: 18px; /*雪の大きさ*/
+    position: fixed;
+    top: -5%; /*初期位置*/
+    text-shadow:
+    5vw   -100px 2px,
+    10vw  -400px 3px,
+    20vw  -500px 4px,
+    30vw  -580px 1px,
+    39vw  -250px 2px,
+    42vw  -340px 5px,
+    56vw  -150px 2px,
+    63vw  -180px 0,
+    78vw  -220px 4px,
+    86vw  -320px 9px,
+    94vw  -170px 7px;
+    animation: anim 1s linear infinite;
+  }
+  
+  @keyframes anim {
+    100% {
+      color: transparent;
+      top: 150%;
+    }
+  }
+
+
+/*felex designeの設定*/
+body {
+  display: flex; /*フレックスボックスに有効に*/
+  flex-flow: column; /*要素を縦に並べる*/
+  min-height: 100vh; /*最小でも画面の高さ分のbodyの高さを担保する*/
+}
+main {
+  flex: 1; /*画面の高さから他の同レイヤーの要素の高さを引いた値に*/
+}
+
+/* 背景の設定 */
+body{
+    background-color: #b1ddf6;
+  }
+
+/* タイトルの設定 */
+.headline {
+  text-align: center;
+  margin-top:20px;
+  margin-bottom: 20px;
+  text-decoration: none; /*下線を非表示にする*/
+  font-size: 50%;
+}
+
+.headline small{
+    background: linear-gradient(transparent 50%, yellow 50%); 
+}
+
+.btn{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* ボタンの設定 */
+.b1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn ul li{
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+/* コピーライト */
+footer{
+  width: 100%;  
+  height:30px;
+  text-align:center;
+  color:#000000;
+  }
+
+  /* 鳥を飛ばす */
+  .bird {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    animation: moving 16s linear infinite;
+  }
+  
+  .bird.-type_2 {
+    animation-delay: 1s;
+  }
+  .bird.-type_2:before,
+  .bird.-type_2:after {
+    animation-delay: -2s;
+  }
+  
+  .bird.-type_3 {
+    animation-delay: 3s;
+  }
+  
+  @keyframes moving {
+    0% {
+      top: 47vh;
+      left: -2vw;
+    }
+    25% {
+      top: 51vh;
+      left: 23vw
+    }
+    100% {
+      top: 47vh;
+      left: 101vw;
+    }
+  }
+  
+  .bird:before, .bird:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    transform: rotate(-30deg);
+    transform-origin: right bottom;
+  }
+  
+  .bird:before {
+    width: 100%;
+    height: 1px;
+    animation: leftWing 8s linear infinite;
+  }
+  .bird:after {
+    width: 1px;
+    height: 100%;
+    animation: rightWing 8s linear infinite;
+  }
+  
+  @keyframes leftWing {
+    0%   { transform: rotate(-30deg); }
+    2%   { transform: rotate(-110deg); }
+    4%   { transform: rotate(-30deg); }
+    6%   { transform: rotate(-110deg); }
+    8%   { transform: rotate(-30deg); }
+    10%  { transform: rotate(-110deg); }
+    12%  { transform: rotate(-30deg); }
+    30%  { transform: rotate(-30deg); }
+    42%  { transform: rotate(-35deg); }
+    72%  { transform: rotate(-35deg); }
+    74%  { transform: rotate(10deg); }
+    76%  { transform: rotate(-30deg); }
+    78%  { transform: rotate(-110deg); }
+    80%  { transform: rotate(-30deg); }
+    82%  { transform: rotate(-110deg); }
+    84%  { transform: rotate(-30deg); }
+    86%  { transform: rotate(-110deg); }
+    88%  { transform: rotate(-30deg); }
+    90%  { transform: rotate(-110deg); }
+    92%  { transform: rotate(-30deg); }
+    94%  { transform: rotate(-110deg); }
+    96%  { transform: rotate(-30deg); }
+    98%  { transform: rotate(-110deg); }
+    100% { transform: rotate(-30deg); }
+  }
+  
+  @keyframes rightWing {
+    0%   { transform: rotate(30deg); }
+    2%   { transform: rotate(110deg); }
+    4%   { transform: rotate(30deg); }
+    6%   { transform: rotate(110deg); }
+    8%   { transform: rotate(30deg); }
+    10%  { transform: rotate(110deg); }
+    12%  { transform: rotate(30deg); }
+    30%  { transform: rotate(30deg); }
+    42%  { transform: rotate(35deg); }
+    72%  { transform: rotate(35deg); }
+    74%  { transform: rotate(0deg); }
+    76%  { transform: rotate(30deg); }
+    78%  { transform: rotate(110deg); }
+    80%  { transform: rotate(30deg); }
+    82%  { transform: rotate(110deg); }
+    84%  { transform: rotate(30deg); }
+    86%  { transform: rotate(110deg); }
+    88%  { transform: rotate(30deg); }
+    90%  { transform: rotate(110deg); }
+    92%  { transform: rotate(30deg); }
+    94%  { transform: rotate(110deg); }
+    96%  { transform: rotate(30deg); }
+    98%  { transform: rotate(110deg); }
+    100% { transform: rotate(30deg); }
+  }
