@@ -11,6 +11,10 @@ You can get suitable webpages if not have knowledge of avation weather.
 
 https://pearlearringminion.github.io/Weather-Link-Collection/index.html
 
+ps.(2021.11.21)
+It is optimaized for smartphone!!
+
+
 # Requirements
 - HTML
 - CSS
